@@ -1,0 +1,2 @@
+F:/github/DoraemonKit/JniTest/testjniapp/src/main/java/com/tele/jni/build_cmkae/CMakeFiles/edit_cache.dir
+F:/github/DoraemonKit/JniTest/testjniapp/src/main/java/com/tele/jni/build_cmkae/CMakeFiles/rebuild_cache.dir

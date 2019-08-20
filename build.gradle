@@ -13,7 +13,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        // 此处为cmake的编译第一处位置
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions"
+            }
+        }
     }
 
     buildTypes {
@@ -22,9 +27,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
+    //将注释打开则为ndk的编译方式
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+    // 此处为cmake的编译第二处位置
+    externalNativeBuild {
+        cmake {
+            path "src\\main\\java\\com\\tele\\jni\\CMakeLists.txt"
         }
     }
 }
