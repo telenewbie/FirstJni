@@ -1,0 +1,8 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := TestJni.cpp
+LOCAL_CFLAGS += -fPIC
+LOCAL_CPP_INCLUDES := .
+LOCAL_MODULE:= testJni
+include $(BUILD_SHARED_LIBRARY)
